@@ -518,7 +518,7 @@ html {
 .abstract-content p {
     color: var(--text-soft);
     font-size: 1.15em;
-    line-height: 1.9;
+    line-height: 1.7;
     margin: 1.5em 0;
     text-align: justify;
 }
@@ -768,6 +768,7 @@ html {
     color: var(--secondary-accent);
     text-decoration: none;
     font-size: 1.1em;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
@@ -847,6 +848,10 @@ html {
     font-size: 1.1em;
     margin-top: -1em;
     margin-bottom: 3em;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 1em;
 }
 
 .demo-container {
@@ -1346,14 +1351,47 @@ html {
         white-space: nowrap;
     }
 
+    .navbar-right {
+        display: flex;
+        align-items: center;
+        gap: 0;
+    }
+
+    .nav-link {
+        padding: 0.7em 1.2em;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
     .footer-contact {
-        text-align: right;
+        text-align: center;
         font-size: 0.85em;
+    }
+
+    .footer-contact a {
+        font-size: 1em;
     }
 
     .demo-container {
         flex-direction: column;
-        gap: 3em;
+        gap: 2.5em;
+    }
+
+    .demo-step {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .demo-mockup {
+        font-size: 0.95em;
+    }
+
+    .section-subtitle {
+        font-size: 1em;
+        margin-bottom: 2em;
     }
 
     .demo-arrow {
@@ -1442,5 +1480,46 @@ html {
 
     .footer-contact a {
         font-size: 0.95em;
+    }
+
+    .demo-mockup {
+        font-size: 0.85em;
+        padding: 1em;
+    }
+
+    .demo-step {
+        max-width: 100%;
+    }
+
+    .section-subtitle {
+        font-size: 0.9em;
+        margin-bottom: 1.5em;
+        padding: 0 0.5em;
+    }
+
+    .step-number {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2em;
+        margin-bottom: 1em;
+    }
+
+    .mockup-table {
+        font-size: 0.8em;
+        overflow-x: auto;
+        display: block;
+    }
+
+    .mockup-table table {
+        min-width: 100%;
+    }
+
+    .mockup-timing {
+        font-size: 0.85em;
+        gap: 0.5em;
+    }
+
+    .demo-arrow {
+        font-size: 2.5em;
     }
 }
