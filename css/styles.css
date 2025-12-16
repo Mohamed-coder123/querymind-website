@@ -6,7 +6,7 @@
     --card-radius: 24px;
     --max-card-width: 1200px;
     --primary-font: 'Segoe UI', Arial, Helvetica, sans-serif;
-    --nav-height: 74px;
+    --nav-height: 80px;
     --text-main: #fff;
     --text-soft: #b3b9c9;
     --gap-between: 52px;
@@ -22,6 +22,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(187, 35, 254, 0.3);
+    -webkit-touch-callout: none;
 }
 
 html, body {
@@ -30,6 +32,7 @@ html, body {
     width: 100%;
     min-height: 100vh;
     overflow-x: hidden;
+    -webkit-text-size-adjust: 100%;
 }
 
 body {
@@ -37,6 +40,8 @@ body {
     font-family: var(--primary-font);
     color: var(--text-main);
     line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Smooth Scrolling */
@@ -60,11 +65,32 @@ html {
     box-shadow: 0 2px 15px rgba(0, 0, 0, 0.3);
 }
 
+.nav-box-link {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s ease;
+}
+
+.nav-box-link:hover {
+    opacity: 0.8;
+}
+
 .nav-box {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+    padding: 0.5em 0;
+}
+
+.nav-box:hover {
+    opacity: 0.8;
+}
+
+.nav-box:active {
+    opacity: 0.6;
 }
 
 .nav-title {
@@ -90,15 +116,19 @@ html {
 }
 
 .nav-link {
-    padding: 0.6em 1.5em;
+    padding: 0.75em 1.8em;
     background: rgba(187, 35, 254, 0.15);
     border: 1px solid rgba(187, 35, 254, 0.3);
-    border-radius: 10px;
+    border-radius: 12px;
     color: var(--accent);
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.95em;
+    font-size: 1em;
     transition: all 0.3s ease;
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .nav-link:hover {
@@ -118,6 +148,14 @@ html {
     background: rgba(35, 193, 237, 0.3);
     border-color: var(--secondary-accent);
     box-shadow: 0 4px 12px rgba(35, 193, 237, 0.4);
+}
+
+.nav-link:active {
+    transform: scale(0.97);
+}
+
+.nav-link:last-child:active {
+    transform: scale(0.97);
 }
 
 .resource-btn, .contact-btn {
@@ -161,7 +199,7 @@ html {
 /* Hero Section */
 .hero {
     background: var(--gradient-purple);
-    padding: 5em 2em;
+    padding: 4em 1.5em;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -229,13 +267,16 @@ html {
 }
 
 .btn-primary, .btn-secondary {
-    padding: 1em 2.5em;
-    border-radius: 12px;
+    padding: 1.1em 2.8em;
+    border-radius: 14px;
     font-size: 1.1em;
     font-weight: 600;
     text-decoration: none;
     transition: all 0.3s ease;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
 }
 
 .btn-primary {
@@ -250,6 +291,11 @@ html {
     box-shadow: 0 6px 20px rgba(187, 35, 254, 0.6);
 }
 
+.btn-primary:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(187, 35, 254, 0.5);
+}
+
 .btn-secondary {
     background: transparent;
     color: #fff;
@@ -259,6 +305,11 @@ html {
 .btn-secondary:hover {
     background: rgba(255, 255, 255, 0.1);
     transform: translateY(-3px);
+}
+
+.btn-secondary:active {
+    transform: translateY(-1px);
+    background: rgba(255, 255, 255, 0.15);
 }
 
 /* Section Styles */
@@ -677,6 +728,48 @@ html {
     border-top: 2px solid rgba(187, 35, 254, 0.3);
 }
 
+.footer-content-simple {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    flex-wrap: wrap;
+    gap: 2em;
+}
+
+.footer-links-row {
+    display: flex;
+    gap: 2em;
+    flex-wrap: wrap;
+}
+
+.footer-links-row a {
+    color: var(--secondary-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.footer-links-row a:hover {
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+.footer-contact {
+    text-align: right;
+}
+
+.footer-contact a {
+    color: var(--text-soft);
+    text-decoration: none;
+    font-size: 1.1em;
+    transition: color 0.3s ease;
+}
+
+.footer-contact a:hover {
+    color: var(--accent);
+}
+
 .footer-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -823,10 +916,12 @@ html {
 }
 
 .resource-btn-link {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     background: var(--accent);
     color: #fff;
-    padding: 0.9em 2em;
+    padding: 1em 2.5em;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
@@ -834,12 +929,18 @@ html {
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(187, 35, 254, 0.3);
+    min-height: 48px;
 }
 
 .resource-btn-link:hover {
     background: #9b1fd6;
     transform: translateY(-3px);
     box-shadow: 0 6px 20px rgba(187, 35, 254, 0.5);
+}
+
+.resource-btn-link:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(187, 35, 254, 0.4);
 }
 
 /* Info Section */
@@ -922,31 +1023,50 @@ html {
     word-wrap: break-word;
 }
 
-/* Responsive Design */
+/* Responsive Design - Mobile First Approach */
 @media (max-width: 768px) {
+    :root {
+        --nav-height: 85px;
+    }
+
+    .hero {
+        padding: 3em 1.2em;
+    }
+
     .hero-title {
-        font-size: 2.5em;
+        font-size: 2.8em;
+        line-height: 1.2;
     }
 
     .hero-subtitle {
-        font-size: 1.3em;
+        font-size: 1.4em;
     }
 
     .hero-description {
-        font-size: 1em;
+        font-size: 1.05em;
+        line-height: 1.7;
     }
 
     .hero-buttons {
         flex-direction: column;
-        gap: 1em;
+        gap: 1.2em;
+        width: 100%;
+    }
+
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        max-width: 400px;
+        padding: 1.2em 2em;
+        font-size: 1.15em;
     }
 
     .section {
-        padding: 3em 1.5em;
+        padding: 3em 1.2em;
     }
 
     .section-title {
-        font-size: 2em;
+        font-size: 2.2em;
+        margin-bottom: 0.8em;
     }
 
     .problem-grid,
@@ -954,29 +1074,49 @@ html {
     .team-grid,
     .resources-grid {
         grid-template-columns: 1fr;
-        gap: 1.5em;
+        gap: 1.8em;
     }
 
     .navbar {
-        padding: 0 2vw;
+        padding: 0 4vw;
+        height: 85px;
     }
 
     .navbar-right {
-        gap: 0.5em;
+        gap: 0.6em;
     }
 
     .nav-link,
     .resource-btn,
     .contact-btn {
-        padding: 0.5em 1em;
-        font-size: 0.85em;
+        padding: 0.8em 1.4em;
+        font-size: 0.95em;
+        min-height: 44px;
     }
 
     .nav-title {
-        font-size: 1.2em;
+        font-size: 1.3em;
     }
 
     .subtitle {
+        font-size: 0.85em;
+    }
+
+    .resource-card,
+    .problem-card,
+    .feature-card {
+        padding: 2em 1.5em;
+    }
+
+    .team-card {
+        padding: 2.5em 1.8em;
+    }
+
+    .resource-btn-link {
+        width: 100%;
+        padding: 1.1em 2em;
+        font-size: 1.1em;
+    }
         font-size: 0.8em;
     }
 
@@ -996,15 +1136,43 @@ html {
         grid-template-columns: 1fr;
         gap: 2em;
     }
+
+    .footer-content-simple {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5em;
+    }
+
+    .footer-links-row {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .footer-contact {
+        text-align: left;
+    }
 }
 
 @media (max-width: 480px) {
+    .hero {
+        padding: 2.5em 1em;
+    }
+
     .hero-title {
-        font-size: 2em;
+        font-size: 2.3em;
+        letter-spacing: 1px;
+    }
+
+    .hero-subtitle {
+        font-size: 1.25em;
     }
 
     .resources-title {
-        font-size: 2em;
+        font-size: 2.2em;
+    }
+
+    .section-title {
+        font-size: 1.9em;
     }
 
     .container {
@@ -1013,8 +1181,33 @@ html {
 
     .resource-card,
     .problem-card,
-    .feature-card,
+    .feature-card {
+        padding: 2em 1.3em;
+    }
+
     .team-card {
-        padding: 1.5em;
+        padding: 2.2em 1.5em;
+    }
+
+    .navbar {
+        padding: 0 3vw;
+    }
+
+    .nav-title {
+        font-size: 1.2em;
+    }
+
+    .subtitle {
+        font-size: 0.8em;
+    }
+
+    .btn-primary, .btn-secondary {
+        padding: 1.15em 2em;
+        font-size: 1.1em;
+    }
+
+    .resource-btn-link {
+        padding: 1.05em 1.8em;
+        font-size: 1.08em;
     }
 }
