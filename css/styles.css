@@ -202,7 +202,7 @@ html {
 /* Hero Section */
 .hero {
     background: var(--gradient-purple);
-    padding: 4em 1.5em;
+    padding: 6em 2em;
     text-align: center;
     position: relative;
     overflow: hidden;
@@ -230,45 +230,45 @@ html {
     display: inline-block;
     background: rgba(35, 193, 237, 0.2);
     color: var(--secondary-accent);
-    padding: 0.5em 1.5em;
-    border-radius: 25px;
-    font-size: 0.9em;
+    padding: 0.6em 1.8em;
+    border-radius: 30px;
+    font-size: 0.85em;
     font-weight: 600;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
     border: 1px solid rgba(35, 193, 237, 0.4);
-    max-width: 90%;
-    line-height: 1.5;
+    max-width: 85%;
+    line-height: 1.6;
 }
 
 .hero-title {
-    font-size: 4em;
+    font-size: 3.5em;
     font-weight: 800;
     color: var(--accent);
-    margin: 0.3em 0;
+    margin: 0.4em 0 0.3em 0;
     letter-spacing: 2px;
     text-shadow: 0 2px 20px rgba(187, 35, 254, 0.5);
 }
 
 .hero-subtitle {
-    font-size: 1.8em;
+    font-size: 1.6em;
     color: #fff;
-    margin: 0.5em 0;
+    margin: 0.6em 0 1em 0;
     font-weight: 600;
 }
 
 .hero-description {
-    font-size: 1.2em;
+    font-size: 1.15em;
     color: var(--text-soft);
-    line-height: 1.8;
-    margin: 1.5em auto;
-    max-width: 700px;
+    line-height: 1.9;
+    margin: 1.8em auto 2em auto;
+    max-width: 650px;
 }
 
 .hero-buttons {
     display: flex;
-    gap: 1.5em;
+    gap: 1.8em;
     justify-content: center;
-    margin-top: 2.5em;
+    margin-top: 3em;
 }
 
 .btn-primary, .btn-secondary {
@@ -726,6 +726,52 @@ html {
     font-size: 1em;
 }
 
+/* Acknowledgment Section */
+.acknowledgment-section {
+    background: var(--gradient-dark);
+}
+
+.acknowledgment-content {
+    max-width: 900px;
+    margin: 2em auto;
+}
+
+.acknowledgment-card {
+    background: var(--card-bg);
+    padding: 3.5em 3em;
+    border-radius: var(--card-radius);
+    border: 2px solid rgba(187, 35, 254, 0.3);
+    box-shadow: 0 10px 40px rgba(187, 35, 254, 0.2);
+    text-align: center;
+}
+
+.acknowledgment-icon {
+    font-size: 4em;
+    margin-bottom: 0.5em;
+}
+
+.acknowledgment-card h3 {
+    font-size: 2em;
+    color: var(--accent);
+    margin-bottom: 0.3em;
+    font-weight: 700;
+}
+
+.acknowledgment-title {
+    color: var(--secondary-accent);
+    font-size: 1.2em;
+    font-weight: 600;
+    margin-bottom: 1.5em;
+}
+
+.acknowledgment-text {
+    color: var(--text-soft);
+    font-size: 1.15em;
+    line-height: 1.9;
+    text-align: justify;
+    margin: 0;
+}
+
 /* Footer */
 .footer {
     background: var(--card-bg);
@@ -835,6 +881,11 @@ html {
     border-top: 1px solid rgba(187, 35, 254, 0.2);
     color: var(--text-soft);
     font-size: 0.9em;
+    white-space: nowrap;
+}
+
+.footer-bottom p {
+    margin: 0;
 }
 
 /* Live Demo Section */
@@ -1022,6 +1073,43 @@ html {
     background: var(--gradient-purple);
     padding: 4em 2em;
     text-align: center;
+    position: relative;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5em;
+    color: var(--text-soft);
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 0.8em 1.5em;
+    border-radius: 12px;
+    background: rgba(187, 35, 254, 0.1);
+    border: 2px solid rgba(187, 35, 254, 0.3);
+    transition: all 0.3s ease;
+    margin-bottom: 2em;
+    position: absolute;
+    left: 2em;
+    top: 2em;
+}
+
+.back-button:hover {
+    background: rgba(187, 35, 254, 0.2);
+    border-color: var(--accent);
+    color: #fff;
+    transform: translateX(-5px);
+}
+
+.back-arrow {
+    font-size: 1.3em;
+    font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.back-button:hover .back-arrow {
+    transform: translateX(-3px);
 }
 
 .resources-title {
@@ -1424,12 +1512,63 @@ html {
         font-size: 2.2em;
     }
 
+    .back-button {
+        position: static;
+        margin: 0 auto 1.5em;
+        font-size: 1em;
+        padding: 0.7em 1.2em;
+    }
+
+    .resources-hero {
+        padding: 3em 1.5em;
+    }
+
+    .footer-bottom {
+        font-size: 0.7em;
+    }
+
     .section-title {
         font-size: 1.9em;
     }
 
     .container {
         padding: 0 1em;
+    }
+
+    .abstract-content {
+        padding: 2em 1.5em;
+        text-align: left;
+    }
+
+    .abstract-content p {
+        font-size: 1.05em;
+        line-height: 1.6;
+        margin: 1.2em 0;
+        text-align: left;
+        word-spacing: normal;
+        letter-spacing: normal;
+    }
+
+    .acknowledgment-card {
+        padding: 2.5em 1.5em;
+    }
+
+    .acknowledgment-icon {
+        font-size: 3em;
+    }
+
+    .acknowledgment-card h3 {
+        font-size: 1.6em;
+    }
+
+    .acknowledgment-title {
+        font-size: 1.1em;
+    }
+
+    .acknowledgment-text {
+        font-size: 1.05em;
+        line-height: 1.7;
+        text-align: left;
     }
 
     .resource-card,
