@@ -1142,6 +1142,10 @@ html {
     margin-bottom: 2em;
 }
 
+.back-button-mobile {
+    display: none;
+}
+
 .back-button:hover {
     background: rgba(187, 35, 254, 0.2);
     border-color: var(--accent);
@@ -1534,7 +1538,12 @@ html {
         margin: 0;
     }
 
-    .back-button {
+    .back-button-desktop {
+        display: none;
+    }
+
+    .back-button-mobile {
+        display: inline-flex;
         position: fixed;
         bottom: 2em;
         left: 1em;
@@ -1542,9 +1551,10 @@ html {
         font-size: 1em;
         padding: 0.75em 1.3em;
         z-index: 1000;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
         background: rgba(187, 35, 254, 0.95);
         backdrop-filter: blur(10px);
+        color: #fff;
     }
 
     .resources-hero {
@@ -1576,17 +1586,23 @@ html {
         font-size: 2.2em;
     }
 
-    .back-button {
-        position: fixed !important;
-        bottom: 1.5em !important;
-        left: 1em !important;
-        margin: 0 !important;
+    .back-button-desktop {
+        display: none;
+    }
+
+    .back-button-mobile {
+        display: inline-flex;
+        position: fixed;
+        bottom: 1.5em;
+        left: 1em;
+        margin: 0;
         font-size: 0.9em;
         padding: 0.65em 1.1em;
         z-index: 1000;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-        background: rgba(187, 35, 254, 0.95) !important;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        background: rgba(187, 35, 254, 0.95);
         backdrop-filter: blur(10px);
+        color: #fff;
     }
 
     .resources-hero {
