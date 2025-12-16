@@ -1560,13 +1560,18 @@ html {
     }
 
     .back-button {
-        margin: 0 auto 1.5em;
-        font-size: 1em;
+        position: fixed;
+        bottom: 2em;
+        left: 1em;
+        margin: 0;
+        font-size: 0.95em;
         padding: 0.7em 1.2em;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
     }
 
     .resources-hero {
-        padding: 3em 1.5em;
+        padding: 3em 1.5em 5em 1.5em;
     }
 
     .footer-bottom {
