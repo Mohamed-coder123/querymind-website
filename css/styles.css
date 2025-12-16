@@ -755,15 +755,12 @@ html {
     border: 2px solid var(--secondary-accent);
     border-radius: 8px;
     transition: all 0.3s ease;
-    opacity: 0;
-    transform: translateY(10px);
 }
 
 .team-link:hover .team-cta {
-    opacity: 1;
-    transform: translateY(0);
     background: var(--secondary-accent);
     color: var(--main-bg);
+    transform: scale(1.05);
 }
 
 /* Acknowledgment Section */
