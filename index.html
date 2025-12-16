@@ -26,7 +26,7 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge">University of Bahrain Senior Project 2025</div>
+            <div class="hero-badge">QueryMind: Intelligent Text-to-SQL Conversion Using RAG-Enhanced LLMs and Comparative Model Evaluation</div>
             <h2 class="hero-title">QueryMind</h2>
             <p class="hero-subtitle">Transform Natural Language into SQL Queries</p>
             <p class="hero-description">
@@ -48,19 +48,19 @@
                 <p>
                     Businesses require natural-language access to databases without exposing records to large language models, 
                     as this compromises data confidentiality and conflicts with governance mandates. This research paper introduces 
-                    <strong>QueryMind</strong>, a system that resolves this issue by transforming natural-language enquiries into 
+                    QueryMind, a system that resolves this issue by transforming natural-language enquiries into 
                     secure SQL through a schema-aware Retrieval-Augmented Generation (RAG) pipeline featuring SELECT-only validation.
                 </p>
                 <p>
                     We tested the system on an e-commerce database with five different model configurations. The best setup, 
-                    <span class="highlight-tech">llama3.1-8b with mxbai-embed-large</span>, achieved <strong>100% accuracy</strong> 
+                    llama3.1-8b with mxbai-embed-large, achieved 100% accuracy 
                     across all benchmark queries. The entire pipeline averaged 33 seconds per query, with 86% of that time dedicated 
                     to LLM generation. The smaller models gave answers faster, in an average of 4 to 7 seconds, but they were only 
                     40 to 60 percent accurate.
                 </p>
                 <p>
-                    Security tests in five different situations indicated that the system could withstand <strong>SQL injection</strong>, 
-                    <strong>XSS</strong>, and <strong>session-hijacking attacks</strong>. The performance of local and remote databases 
+                    Security tests in five different situations indicated that the system could withstand SQL injection, 
+                    XSS, and session-hijacking attacks. The performance of local and remote databases 
                     was almost the same, with only a 7% difference in total processing times. The results show that bigger LLMs take 
                     longer to process, but they make SQL generation more accurate and safer. They also show that a fully local, 
                     schema-restricted setup is reliable and keeps data private.
@@ -137,18 +137,6 @@
         <div class="container">
             <h2 class="section-title">System Architecture</h2>
             <div class="architecture-content">
-                <div class="tech-stack">
-                    <h3>Technology Stack</h3>
-                    <div class="tech-badges">
-                        <span class="tech-badge">Python 3.8+</span>
-                        <span class="tech-badge">Flask</span>
-                        <span class="tech-badge">Llama 3.1:8b</span>
-                        <span class="tech-badge">Ollama</span>
-                        <span class="tech-badge">ChromaDB</span>
-                        <span class="tech-badge">MySQL/MariaDB</span>
-                        <span class="tech-badge">mxbai-embed-large</span>
-                    </div>
-                </div>
                 <div class="architecture-diagram">
                     <div class="arch-layer">
                         <div class="arch-box">User Interface (Flask Web App)</div>
