@@ -1140,9 +1140,6 @@ html {
     border: 2px solid rgba(187, 35, 254, 0.3);
     transition: all 0.3s ease;
     margin-bottom: 2em;
-    position: absolute;
-    left: 2em;
-    top: 2em;
 }
 
 .back-button:hover {
@@ -1563,7 +1560,6 @@ html {
     }
 
     .back-button {
-        position: static;
         margin: 0 auto 1.5em;
         font-size: 1em;
         padding: 0.7em 1.2em;
