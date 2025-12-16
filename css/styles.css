@@ -89,6 +89,37 @@ html {
     gap: 1em;
 }
 
+.nav-link {
+    padding: 0.6em 1.5em;
+    background: rgba(187, 35, 254, 0.15);
+    border: 1px solid rgba(187, 35, 254, 0.3);
+    border-radius: 10px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95em;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+    background: rgba(187, 35, 254, 0.3);
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(187, 35, 254, 0.4);
+}
+
+.nav-link:last-child {
+    background: rgba(35, 193, 237, 0.15);
+    border: 1px solid rgba(35, 193, 237, 0.3);
+    color: var(--secondary-accent);
+}
+
+.nav-link:last-child:hover {
+    background: rgba(35, 193, 237, 0.3);
+    border-color: var(--secondary-accent);
+    box-shadow: 0 4px 12px rgba(35, 193, 237, 0.4);
+}
+
 .resource-btn, .contact-btn {
     padding: 0.6em 1.5em;
     background: rgba(187, 35, 254, 0.15);
@@ -595,10 +626,21 @@ html {
     transition: all 0.3s ease;
 }
 
+.team-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
 .team-card:hover {
     transform: translateY(-10px);
     border-color: var(--accent);
     box-shadow: 0 10px 30px rgba(187, 35, 254, 0.3);
+}
+
+.team-card:hover .team-avatar {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(187, 35, 254, 0.5);
 }
 
 .team-avatar {
@@ -614,6 +656,7 @@ html {
     font-weight: 700;
     color: #fff;
     border: 3px solid var(--accent);
+    transition: all 0.3s ease;
 }
 
 .team-card h3 {
@@ -922,6 +965,7 @@ html {
         gap: 0.5em;
     }
 
+    .nav-link,
     .resource-btn,
     .contact-btn {
         padding: 0.5em 1em;
