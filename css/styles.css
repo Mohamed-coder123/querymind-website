@@ -760,14 +760,14 @@ html {
 }
 
 .footer-contact a {
-    color: var(--text-soft);
+    color: var(--secondary-accent);
     text-decoration: none;
     font-size: 1.1em;
     transition: color 0.3s ease;
 }
 
 .footer-contact a:hover {
-    color: var(--accent);
+    color: #fff;
 }
 
 .footer-content {
@@ -828,6 +828,7 @@ html {
     padding-top: 2em;
     border-top: 1px solid rgba(187, 35, 254, 0.2);
     color: var(--text-soft);
+    font-size: 0.9em;
 }
 
 /* Resources Page Styles */
@@ -858,8 +859,8 @@ html {
 
 .resources-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5em;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2em;
     margin-top: 3em;
 }
 
@@ -1071,10 +1072,14 @@ html {
 
     .problem-grid,
     .features-grid,
-    .team-grid,
-    .resources-grid {
+    .team-grid {
         grid-template-columns: 1fr;
         gap: 1.8em;
+    }
+
+    .resources-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5em;
     }
 
     .navbar {
@@ -1207,5 +1212,10 @@ html {
     .resource-btn-link {
         padding: 1.05em 1.8em;
         font-size: 1.08em;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5em;
     }
 }
