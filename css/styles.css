@@ -1232,20 +1232,6 @@ html {
     margin-bottom: -2em;
 }
 
-.resources-hero::after {
-    content: '';
-    position: absolute;
-    bottom: -100px;
-    left: 0;
-    width: 100%;
-    height: 120px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M0,60 Q300,10 600,60 T1200,60 L1200,120 L0,120 Z' fill='%23bb23fe' opacity='0.8'/%3E%3C/svg%3E");
-    background-size: cover;
-    background-repeat: no-repeat;
-    pointer-events: none;
-    z-index: 10;
-}
-
 .back-button {
     display: none;
 }
