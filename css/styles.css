@@ -1225,11 +1225,11 @@ html {
 /* Resources Page Styles */
 .resources-hero {
     background: var(--gradient-purple);
-    padding: 4em 2em 5em 2em;
+    padding: 2.5em 2em 3em 2em;
     text-align: center;
     position: relative;
     border-radius: 0 0 60px 60px;
-    margin-bottom: -3em;
+    margin-bottom: -2em;
 }
 
 .back-button {
@@ -1237,36 +1237,7 @@ html {
 }
 
 .back-button-desktop {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5em;
-    color: var(--text-soft);
-    text-decoration: none;
-    font-size: 1.1em;
-    font-weight: 500;
-    padding: 0.8em 1.5em;
-    border-radius: 12px;
-    background: rgba(187, 35, 254, 0.1);
-    border: 2px solid rgba(187, 35, 254, 0.3);
-    transition: all 0.3s ease;
-    margin-bottom: 2em;
-}
-
-.back-button-desktop:hover {
-    background: rgba(187, 35, 254, 0.2);
-    border-color: var(--accent);
-    color: #fff;
-    transform: translateX(-5px);
-}
-
-.back-button-desktop .back-arrow {
-    font-size: 1.3em;
-    font-weight: 700;
-    transition: transform 0.3s ease;
-}
-
-.back-button-desktop:hover .back-arrow {
-    transform: translateX(-3px);
+    display: none;
 }
 
 .back-button-mobile {
@@ -1366,25 +1337,26 @@ html {
 }
 
 .resources-title {
-    font-size: 3em;
+    font-size: 2.5em;
     color: var(--accent);
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     font-weight: 700;
 }
 
 .resources-description {
-    font-size: 1.2em;
+    font-size: 1.05em;
     color: var(--text-soft);
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.8;
+    line-height: 1.6;
 }
 
 .resources-section {
     background: var(--main-bg);
     position: relative;
     z-index: 1;
-    padding-top: 5em;
+    padding-top: 3em;
+    padding-bottom: 2em;
 }
 
 .resources-grid {
@@ -1396,7 +1368,7 @@ html {
 
 .resource-card {
     background: var(--card-bg);
-    padding: 2.5em;
+    padding: 1.8em;
     border-radius: var(--card-radius);
     border: 2px solid rgba(187, 35, 254, 0.2);
     transition: all 0.3s ease;
@@ -1411,22 +1383,23 @@ html {
 }
 
 .resource-icon {
-    font-size: 3.5em;
-    margin-bottom: 0.5em;
+    font-size: 2.8em;
+    margin-bottom: 0.3em;
 }
 
 .resource-title {
     color: #fff;
-    font-size: 1.5em;
-    margin: 0.5em 0;
+    font-size: 1.3em;
+    margin: 0.3em 0;
     font-weight: 700;
 }
 
 .resource-description {
     color: var(--text-soft);
-    line-height: 1.7;
-    margin: 1em 0;
+    line-height: 1.5;
+    margin: 0.5em 0;
     flex-grow: 1;
+    font-size: 0.95em;
 }
 
 .resource-meta {
@@ -1452,15 +1425,15 @@ html {
     justify-content: center;
     background: var(--accent);
     color: #fff;
-    padding: 1em 2.5em;
+    padding: 0.8em 1.8em;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1.05em;
+    font-size: 0.95em;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(187, 35, 254, 0.3);
-    min-height: 48px;
+    min-height: 44px;
 }
 
 .resource-btn-link:hover {
