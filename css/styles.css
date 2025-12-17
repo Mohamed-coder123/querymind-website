@@ -1233,6 +1233,10 @@ html {
 }
 
 .back-button {
+    display: none;
+}
+
+.back-button-desktop {
     display: inline-flex;
     align-items: center;
     gap: 0.5em;
@@ -1248,21 +1252,42 @@ html {
     margin-bottom: 2em;
 }
 
-.back-button-mobile {
-    display: none;
-    align-items: center;
-    justify-content: center;
+.back-button-desktop:hover {
+    background: rgba(187, 35, 254, 0.2);
+    border-color: var(--accent);
     color: #fff;
-    text-decoration: none;
-    font-size: 1.5em;
+    transform: translateX(-5px);
+}
+
+.back-button-desktop .back-arrow {
+    font-size: 1.3em;
     font-weight: 700;
+    transition: transform 0.3s ease;
+}
+
+.back-button-desktop:hover .back-arrow {
+    transform: translateX(-3px);
+}
+
+.back-button-mobile {
+    display: inline-flex;
+    position: fixed;
+    bottom: 2em;
+    left: 1em;
+    margin: 0;
+    font-size: 1.5em;
+    padding: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(35, 193, 237, 0.4);
+    background: rgba(35, 193, 237, 0.95);
+    backdrop-filter: blur(10px);
+    color: #fff;
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: rgba(35, 193, 237, 0.95);
+    align-items: center;
+    justify-content: center;
     border: 2px solid rgba(35, 193, 237, 0.5);
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 20px rgba(35, 193, 237, 0.4);
 }
 
 .up-button {
@@ -1283,7 +1308,20 @@ html {
 }
 
 .up-button-mobile {
-    display: none;
+    display: inline-flex;
+    position: fixed;
+    bottom: 2em;
+    right: 1em;
+    z-index: 1000;
+    box-shadow: 0 4px 20px rgba(35, 193, 237, 0.4);
+    background: rgba(35, 193, 237, 0.95);
+    backdrop-filter: blur(10px);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid rgba(35, 193, 237, 0.5);
 }
 
 .up-button:hover {
@@ -1300,13 +1338,6 @@ html {
 
 .up-button:hover .up-arrow {
     transform: translateY(-3px);
-}
-
-.back-button:hover {
-    background: rgba(187, 35, 254, 0.2);
-    border-color: var(--accent);
-    color: #fff;
-    transform: translateX(-5px);
 }
 
 .back-button-mobile:hover {
