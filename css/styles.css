@@ -918,7 +918,6 @@ html {
     border-top: 1px solid rgba(187, 35, 254, 0.2);
     color: var(--text-soft);
     font-size: 0.9em;
-    white-space: nowrap;
 }
 
 .footer-bottom p {
@@ -1121,9 +1120,11 @@ html {
 /* Resources Page Styles */
 .resources-hero {
     background: var(--gradient-purple);
-    padding: 4em 2em;
+    padding: 4em 2em 5em 2em;
     text-align: center;
     position: relative;
+    border-radius: 0 0 60px 60px;
+    margin-bottom: -3em;
 }
 
 .back-button {
@@ -1144,6 +1145,43 @@ html {
 
 .back-button-mobile {
     display: none;
+}
+
+.up-button {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 700;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: rgba(35, 193, 237, 0.95);
+    border: 2px solid rgba(35, 193, 237, 0.5);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 20px rgba(35, 193, 237, 0.4);
+}
+
+.up-button-mobile {
+    display: none;
+}
+
+.up-button:hover {
+    background: rgba(35, 193, 237, 1);
+    border-color: var(--secondary-accent);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(35, 193, 237, 0.6);
+}
+
+.up-arrow {
+    font-size: 1.2em;
+    transition: transform 0.3s ease;
+}
+
+.up-button:hover .up-arrow {
+    transform: translateY(-3px);
 }
 
 .back-button:hover {
@@ -1180,6 +1218,9 @@ html {
 
 .resources-section {
     background: var(--main-bg);
+    position: relative;
+    z-index: 1;
+    padding-top: 5em;
 }
 
 .resources-grid {
@@ -1472,18 +1513,19 @@ html {
     }
 
     .footer-content-simple {
-        flex-direction: row;
+        flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 1em;
-        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1.5em;
+        text-align: center;
     }
 
     .footer-links-row {
         flex-direction: row;
-        gap: 0.8em;
-        flex-wrap: nowrap;
-        font-size: 0.85em;
+        gap: 1em;
+        flex-wrap: wrap;
+        font-size: 0.9em;
+        justify-content: center;
     }
 
     .footer-links-row a {
@@ -1506,11 +1548,13 @@ html {
 
     .footer-contact {
         text-align: center;
-        font-size: 0.85em;
+        font-size: 0.9em;
+        width: 100%;
     }
 
     .footer-contact a {
         font-size: 1em;
+        word-break: break-word;
     }
 
     .demo-container {
@@ -1555,6 +1599,17 @@ html {
         background: rgba(187, 35, 254, 0.95);
         backdrop-filter: blur(10px);
         color: #fff;
+    }
+
+    .up-button-mobile {
+        display: inline-flex;
+        position: fixed;
+        bottom: 2em;
+        right: 1em;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(35, 193, 237, 0.4);
+        background: rgba(35, 193, 237, 0.95);
+        backdrop-filter: blur(10px);
     }
 
     .resources-hero {
@@ -1605,12 +1660,33 @@ html {
         color: #fff;
     }
 
+    .up-button-mobile {
+        display: inline-flex;
+        position: fixed;
+        bottom: 1.5em;
+        right: 1em;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(35, 193, 237, 0.5);
+        background: rgba(35, 193, 237, 0.95);
+        backdrop-filter: blur(10px);
+        width: 45px;
+        height: 45px;
+        font-size: 1.3em;
+    }
+
     .resources-hero {
         padding: 3em 1.5em 5em 1.5em;
     }
 
     .footer-bottom {
-        font-size: 0.7em;
+        font-size: 0.75em;
+        padding-top: 1.5em;
+        line-height: 1.6;
+    }
+
+    .footer-bottom p {
+        margin: 0;
+        padding: 0 0.5em;
     }
 
     .section-title {
