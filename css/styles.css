@@ -1225,11 +1225,11 @@ html {
 /* Resources Page Styles */
 .resources-hero {
     background: var(--gradient-purple);
-    padding: 3.5em 2em 4.5em 2em;
+    padding: 2em 2em 3em 2em;
     text-align: center;
     position: relative;
     border-radius: 0 0 60px 60px;
-    margin-bottom: -2.5em;
+    margin-bottom: -2em;
 }
 
 .back-button {
@@ -1339,38 +1339,41 @@ html {
 }
 
 .resources-title {
-    font-size: 2.8em;
+    font-size: 2.6em;
     color: var(--accent);
-    margin-bottom: 0.4em;
+    margin-bottom: 0.3em;
     font-weight: 700;
 }
 
 .resources-description {
-    font-size: 1.15em;
+    font-size: 1.1em;
     color: var(--text-soft);
     max-width: 800px;
     margin: 0 auto;
-    line-height: 1.7;
+    line-height: 1.6;
 }
 
 .resources-section {
     background: var(--main-bg);
     position: relative;
     z-index: 1;
-    padding-top: 4em;
-    padding-bottom: 3.5em;
+    padding: 3.5em 2em 2em 2em;
+    min-height: calc(100vh - 380px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .resources-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 2em;
-    margin-top: 3em;
+    gap: 1.8em;
+    margin-top: 2.5em;
 }
 
 .resource-card {
     background: var(--card-bg);
-    padding: 2.2em 2em;
+    padding: 2em 1.8em;
     border-radius: var(--card-radius);
     border: 2px solid rgba(187, 35, 254, 0.2);
     transition: all 0.3s ease;
@@ -1385,23 +1388,23 @@ html {
 }
 
 .resource-icon {
-    font-size: 3.2em;
-    margin-bottom: 0.5em;
+    font-size: 3em;
+    margin-bottom: 0.4em;
 }
 
 .resource-title {
     color: #fff;
-    font-size: 1.4em;
-    margin: 0.4em 0 0.6em 0;
+    font-size: 1.35em;
+    margin: 0.3em 0 0.5em 0;
     font-weight: 700;
 }
 
 .resource-description {
     color: var(--text-soft);
-    line-height: 1.6;
-    margin: 0.5em 0 1.2em 0;
+    line-height: 1.55;
+    margin: 0.4em 0 1em 0;
     flex-grow: 1;
-    font-size: 1em;
+    font-size: 0.98em;
 }
 
 .resource-meta {
@@ -1427,15 +1430,15 @@ html {
     justify-content: center;
     background: var(--accent);
     color: #fff;
-    padding: 0.9em 2em;
+    padding: 0.85em 1.8em;
     border-radius: 12px;
     text-decoration: none;
     font-weight: 600;
-    font-size: 1em;
+    font-size: 0.98em;
     text-align: center;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(187, 35, 254, 0.3);
-    min-height: 46px;
+    min-height: 44px;
 }
 
 .resource-btn-link:hover {
