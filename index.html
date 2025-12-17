@@ -367,6 +367,11 @@ WHERE country = 'Bahrain';</pre>
         </div>
     </section>
 
+    <!-- Floating Up Button for Mobile -->
+    <a href="#" class="up-button up-button-mobile scroll-to-top">
+        <span class="up-arrow">↑</span>
+    </a>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
@@ -386,5 +391,13 @@ WHERE country = 'Bahrain';</pre>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Smooth scroll to top
+        document.querySelector('.scroll-to-top')?.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
 </body>
 </html>
